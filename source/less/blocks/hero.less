@@ -1,3 +1,7 @@
+.hero {
+  .flex-center();
+}
+
 .hero__wrapper {
   padding-top: 90px;
   background-image: url("../img/hero-mobile.png");
@@ -8,6 +12,10 @@
   @media (min-width: @w-tablet) {
     padding: 0 50px;
     padding-top: 155px;
+  }
+
+  @media (min-width: @w-desktop) {
+    width: @w-desktop;
   }
 }
 
@@ -24,6 +32,11 @@
     margin-bottom: 372px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media (min-width: @w-desktop) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 

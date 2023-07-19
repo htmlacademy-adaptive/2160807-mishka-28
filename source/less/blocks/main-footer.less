@@ -1,5 +1,9 @@
 .main-footer {
   background-color: @bg-grey;
+
+  @media (min-width: @w-desktop) {
+    .flex-center();
+  }
 }
 
 .main-footer__wrapper {
@@ -12,6 +16,11 @@
     padding: 51px 50px 58px;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    width: @w-desktop;
+    box-sizing: border-box;
   }
 }
 

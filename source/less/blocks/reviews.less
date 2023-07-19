@@ -1,10 +1,12 @@
 .reviews {
   position: relative;
-  background-image: url("../img/review.jpg");
-  background-repeat: no-repeat;
 
   &::after {
     .zig-zag();
+  }
+
+  @media (min-width: @w-desktop) {
+    .flex-center();
   }
 }
 
@@ -14,6 +16,14 @@
   @media (min-width: @w-tablet) {
     padding: 80px 50px 115px;
     position: relative;
+    background-image: url("../img/review.jpg");
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @w-desktop) {
+    box-sizing: border-box;
+    padding-left: 143px;
+    width: @w-desktop;
   }
 }
 
@@ -25,6 +35,11 @@
     font-size: 43px;
     line-height: 50px;
     margin-bottom: 39px;
+  }
+
+  @media (min-width: @w-desktop) {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 

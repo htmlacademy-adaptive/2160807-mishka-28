@@ -1,8 +1,20 @@
+.advantages {
+  @media (min-width: @w-desktop) {
+    .flex-center();
+  }
+}
+
 .advantages__wrapper {
   padding: 31px 30px 58px;
 
   @media (min-width: @w-tablet) {
     padding: 55px 50px 83px;
+  }
+
+  @media (min-width: @w-desktop) {
+    padding: 68px 50px 90px 143px;
+    width: @w-desktop;
+    box-sizing: border-box;
   }
 }
 
