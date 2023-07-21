@@ -10,13 +10,13 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="#" width="86" height="35" alt="логотип Мишка">
+          <img src="img/mishka-logo-mobile.png" width="86" height="35" alt="логотип Мишка">
         </a>
         <nav class="main-header__main-nav main-nav">
           <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--nojs">
-            <ul class="main-nav__list">
+            <ul class="main-nav__list main-nav__list--menu">
               <li class="main-nav__item">
-                <a href="catalog.html" class="main-nav__link">
+                <a href="catalog.html" class="main-nav__link main-nav__link--catalog">
                   Каталог товаров
                 </a>
               </li>
@@ -26,18 +26,31 @@
                 </a>
               </li>
             </ul>
-            <ul class="main-nav__list">
+            <ul class="main-nav__list main-nav__list--user">
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
-                  Поиск по сайту
+                <a href="#" class="main-nav__link main-nav__link--search">
+                  <span>Поиск по сайту</span>
                 </a>
               </li>
               <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+                <a href="#" class="main-nav__link main-nav__link--cart">
                   Корзина: пока пуста
                 </a>
               </li>
             </ul>
+            <ul class="main-nav__list main-nav__list--products">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span>Новые поступления</span>
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  <span>Распродажа</span>
+                </a>
+              </li>
+            </ul>
+            <p class="main-nav__info">Бесплатная доставка по России</p>
           </div>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -54,9 +67,9 @@
         <div class="form__wrapper">
           <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="form__container" action=" https://echo.htmlacademy.ru/" method="post">
-            <fieldset class="form__group form__group-type">
-              <legend class="form__group-title">тип</legend>
-              <ul class="form__group-list">
+            <fieldset class="form__group form__group--type">
+              <legend class="form__group-title form__group-title--type">тип</legend>
+              <ul class="form__group-list form__group-list--type">
                 <li class="form__group-item form__group-item--type">
                   <input class="form__group-radio visually-hidden" type="radio" name="type" id="accessories" value="accessories" checked>
                   <label class="form__group-subtitle form__radio-style" for="accessories">Аксессуар для интерьера</label>
@@ -67,7 +80,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__group form__group-color">
+            <fieldset class="form__group form__group--color">
               <legend class="form__group-title title form__group-title--color">цвет</legend>
               <ul class="form__group-list form__group-list--color">
                 <li class="form__group-item form__group-item--color">
@@ -75,7 +88,7 @@
                   <label class="form__group-subtitle form__checkbox-style" for="white">Белый</label>
                 </li>
                 <li class="form__group-item form__group-item--color">
-                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="grey">
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="grey" checked>
                   <label class="form__group-subtitle form__checkbox-style" for="grey">Серый</label>
                 </li>
                 <li class="form__group-item form__group-item--color">
@@ -87,18 +100,18 @@
                   <label class="form__group-subtitle form__checkbox-style" for="black">Черный</label>
                 </li>
                 <li class="form__group-item form__group-item--color">
-                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="pink" checked>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="pink">
                   <label class="form__group-subtitle form__checkbox-style" for="pink">Розовый</label>
                 </li>
                 <li class="form__group-item form__group-item--color">
-                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="orange" checked>
+                  <input type="checkbox" class="form__group-checkbox visually-hidden" name="color" id="orange">
                   <label class="form__group-subtitle form__checkbox-style" for="orange">Оранжевый</label>
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__group form__group-lfp"> <!--lfp:last-name, first-name, patronymic-->
+            <fieldset class="form__group form__group--lfp"> <!--lfp:last-name, first-name, patronymic-->
               <legend class="form__group-title title form__group-title--lfp">ФИО</legend>
-              <ul class="form__group-list">
+              <ul class="form__group-list form__group-list--lfp">
                 <li class="form__group-item form__group-item--lfp">
                   <label class="form__group-subtitle" for="first-name">Имя:</label>
                   <input class="form__group-input input-style" type="text" id="first-name" placeholder="Введите ваше имя*" required>
@@ -112,7 +125,7 @@
                   <input class="form__group-input input-style" type="text" id="patronymic" placeholder="Отчество, если желаете">
                 </li>
             </fieldset>
-            <fieldset class="form__group form__group-contacts">
+            <fieldset class="form__group form__group--contacts">
               <ul class="form__group-list form__group-list--contacts">
                 <li class="form__group-item form__group-item--contacts">
                   <label class="form__group-subtitle form__group-subtitle--tel" for="tel">тел
@@ -126,7 +139,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form__group form__group--additionally">
+            <fieldset class="form__group form__group--comments">
               <label class="form__group-title title form__group-title--comments" for="comments">доп</label>
               <textarea class="form__group-textarea input-style" name="comments" id="comments" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </fieldset>
@@ -143,7 +156,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__logo-link" href="index.html">
-          <img class="main-footer__logo" src="#" width="102" height="34" alt="Mishka">
+          <img class="main-footer__logo" src="img/stack.svg#logo-footer" width="102" height="34" alt="Mishka">
         </a>
         <ul class="main-footer__social-list">
           <li class="main-footer__social-item">
@@ -163,11 +176,11 @@
           </li>
         </ul>
         <div class="main-footer__html html-logo">
-          <span class="html-logo__span">Разработано</span>
-          <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         </div>
       </div>
     </footer>
 
+    <script src="js/script.js"></script>
   </body>
 </html>

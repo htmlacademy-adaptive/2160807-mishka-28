@@ -2,10 +2,84 @@
   .title();
   text-align: center;
   font-size: 27px;
+  height: 180px;
+  padding-top: 75px;
+  box-sizing: border-box;
+  background-color: @grey;
+
+  @media (min-width: @w-tablet) {
+    font-size: 43px;
+    line-height: 50px;
+    height: 226px;
+    padding-top: 101px;
+  }
+}
+
+.catalog {
+  .flex-center();
+}
+
+.catalog__wrapper {
+  padding: 30px;
+
+  @media (min-width: @w-tablet) {
+    padding: 67px 50px 53px;
+  }
+
+  @media (min-width: @w-desktop) {
+    box-sizing: border-box;
+    width: @w-desktop;
+  }
 }
 
 .catalog__list {
   .list-reset();
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @media (min-width: @w-desktop) {
+    flex-direction: row;
+    gap: 51px;
+  }
+}
+
+.catalog__item {
+  &:hover {
+    box-shadow: 0 6px 10px 0 fade(@black, 10%);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 fade(@black, 10%);
+  }
+
+  @media (min-width: @w-tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    flex-direction: column;
+  }
+}
+
+.catalog__about-product {
+  border: 1px solid @grey;
+  padding: 28px 32px 27px 28px;
+
+  @media (min-width: @w-tablet) {
+    min-height: 335px;
+    width: 334px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @w-desktop) {
+    width: 316px;
+    box-sizing: border-box;
+    min-height: 200px;
+  }
 }
 
 .catalog__link {
@@ -13,14 +87,72 @@
   color: @black;
   font-size: 17px;
   font-weight: 700;
+  margin-bottom: 6px;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+
+  @media (min-width: @w-tablet) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .catalog__info {
   font-size: 13px;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: @w-tablet) {
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+.catalog__price-cart {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: @grey;
+    top: -22px;
+  }
 }
 
 .catalog__price {
   font-weight: 700;
   color: @black;
+  margin: 0;
+
+  @media (min-width: @w-tablet) {
+    font-size: 17px;
+  }
+}
+
+.catalog__cart {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  mask-image: url("../../img/stack.svg#cart");
+  mask-repeat: no-repeat;
+  background-color: @grey;
+
+  &:hover {
+    background-color: @green;
+  }
+
+  &:active {
+    background-color: fade(@green, 30%);
+  }
 }
