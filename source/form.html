@@ -10,7 +10,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="img/mishka-logo-mobile.png" width="86" height="35" alt="логотип Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop@1x.png 1x, img/mishka-logo-desktop@2x.png 2x" width="150" height="72">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet@1x.png 1x, img/mishka-logo-tablet@2x.png 2x">
+            <img src="img/mishka-logo-mobile.png" width="86" height="35" alt="логотип Мишка">
+          </picture>
         </a>
         <nav class="main-header__main-nav main-nav">
           <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--nojs">
@@ -124,6 +128,7 @@
                   <label class="form__group-subtitle" for="patronymic">Отчество:</label>
                   <input class="form__group-input input-style" type="text" id="patronymic" placeholder="Отчество, если желаете">
                 </li>
+              </ul>
             </fieldset>
             <fieldset class="form__group form__group--contacts">
               <ul class="form__group-list form__group-list--contacts">

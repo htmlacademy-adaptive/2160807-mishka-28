@@ -1,4 +1,6 @@
 .hero {
+  background-color: #f9f9f9;
+
   @media (min-width: @w-desktop) {
     .flex-center();
   }
@@ -11,14 +13,31 @@
   background-position: center;
   background-position-y: 0;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-mobile@2x.png");
+    background-size: cover;
+  }
+
   @media (min-width: @w-tablet) {
     padding: 0 50px;
     padding-top: 155px;
+    background-image: url("../img/hero-tablet@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-tablet@2x.png");
+      background-size: cover;
+    }
   }
 
   @media (min-width: @w-desktop) {
     width: @w-desktop;
     box-sizing: border-box;
+    background-image: url("../img/hero-desktop@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-desktop@2x.png");
+      background-size: cover;
+    }
   }
 }
 
@@ -62,6 +81,18 @@
   padding: 24px 160px 31px 30px;
   background-color: @green;
   position: relative;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+
+  &:hover {
+    min-height: 108px;
+    padding-top: 19px;
+  }
+
+  &:focus {
+    min-height: 108px;
+    padding-top: 19px;
+  }
 
   &--lamp {
     &::before {
@@ -76,6 +107,14 @@
     }
 
     &:hover::before {
+      opacity: 70%;
+    }
+
+    &:active::before {
+      opacity: 30%;
+    }
+
+    &:focus::before {
       opacity: 70%;
     }
   }
@@ -95,6 +134,14 @@
     }
 
     &:hover::before {
+      opacity: 70%;
+    }
+
+    &:active::before {
+      opacity: 30%;
+    }
+
+    &:focus::before {
       opacity: 70%;
     }
   }

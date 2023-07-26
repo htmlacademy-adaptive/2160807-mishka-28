@@ -12,7 +12,7 @@
   }
 
   @media (min-width: @w-desktop) {
-    padding: 68px 50px 90px 143px;
+    padding: 68px 50px 90px 225px;
     width: @w-desktop;
     box-sizing: border-box;
   }
@@ -25,6 +25,13 @@
   @media (min-width: @w-tablet) {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 97px;
+  }
+
+  @media (min-width: @w-desktop) {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 95px;
   }
 }
 
@@ -49,6 +56,41 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
+  position: relative;
+
+  &--flower::before {
+    background-image: url("../img/flower-icon.png");
+  }
+
+  &--cash::before {
+    background-image: url("../img/cash-icon.png");
+  }
+
+  &--heart::before {
+    background-image: url("../img/heart-icon.png");
+  }
+
+  &--ball::before {
+    background-image: url("../img/ball-icon.png");
+  }
+
+  &--rocket::before {
+    background-image: url("../img/rocket-icon.png");
+  }
+
+  &--gift::before {
+    background-image: url("../img/gift-icon.png");
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 55px;
+    height: 82px;
+    top: -82px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 
   @media (min-width: @w-tablet) {
     font-size: 20px;

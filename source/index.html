@@ -10,7 +10,11 @@
     <header class="main-header">
       <div class="main-header__wrapper">
         <a class="main-header__logo" href="index.html">
-          <img src="img/mishka-logo-mobile.png" width="86" height="35" alt="логотип Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/mishka-logo-desktop@1x.png 1x, img/mishka-logo-desktop@2x.png 2x" width="150" height="72">
+            <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet@1x.png 1x, img/mishka-logo-tablet@2x.png 2x">
+            <img src="img/mishka-logo-mobile.png" width="86" height="35" alt="логотип Мишка">
+          </picture>
         </a>
         <nav class="main-header__main-nav main-nav">
           <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--nojs">
@@ -96,10 +100,14 @@
               </li>
             </ul>
             <a class="featured__img-link" href="#">
-              <img src="img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img src="img/triple-set-mobile.jpg" width="260" height="315" alt="Вязаные корзинки" srcset="img/triple-set-mobile@2x.jpg">
+              </picture>
             </a>
             <p class="featured__price">Цена: 990 руб.</p>
-            <a class="featured__link" href="#">Заказать</a>
+            <button class="featured__link" type="button">Заказать</button>
           </div>
         </div>
       </section>
@@ -164,9 +172,7 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <a class="main-footer__logo-link" href="index.html">
-          <img class="main-footer__logo" src="img/stack.svg#logo-footer" width="102" height="34" alt="Mishka">
-        </a>
+        <a class="main-footer__logo-link" href="index.html"></a>
         <ul class="main-footer__social-list">
           <li class="main-footer__social-item">
             <a class="main-footer__social-button main-footer__social-button--vk" href=" https://vk.com/htmlacademy">
@@ -189,7 +195,31 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal--closed">
+      <div class="modal__wrapper">
+        <h2 class="modal__title">добавить в корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+        <form class="modal__form" action=" https://echo.htmlacademy.ru/" method="post">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <input class="modal__radio visually-hidden" type="radio" name="s" id="s" checked>
+              <label class="modal__size" for="s">S</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__radio visually-hidden" type="radio" name="m" id="m">
+              <label class="modal__size" for="m">M</label>
+            </li>
+            <li class="modal__item">
+              <input class="modal__radio visually-hidden" type="radio" name="l" id="l">
+              <label class="modal__size" for="l">L</label>
+            </li>
+          </ul>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </section>
 
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

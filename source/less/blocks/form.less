@@ -1,11 +1,14 @@
 .form {
-  @media (min-width: @w-desktop) {
-    .flex-center();
-    position: relative;
+  position: relative;
 
+  @media (min-width: @w-tablet) {
     &::before {
       .zig-zag-fill();
     }
+  }
+
+  @media (min-width: @w-desktop) {
+    .flex-center();
   }
 }
 
@@ -273,6 +276,7 @@
     border-radius: 50%;
     box-sizing: border-box;
     left: 0;
+    transition: border-color 0.2s ease-in-out;
   }
 
   &:hover::before {
@@ -316,6 +320,7 @@
     border: 2px solid @dark-grey;
     box-sizing: border-box;
     left: 0;
+    transition: border-color 0.2s ease-in-out;
   }
 
   &:hover::before {
@@ -354,6 +359,57 @@
 .form__group-item--contacts .form__group-subtitle {
   color: @green;
   text-transform: uppercase;
+  position: relative;
+
+  &--tel::before {
+    content: " ";
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    mask-image: url("../img/stack.svg#phone");
+    mask-repeat: no-repeat;
+    background-color: fade(@black, 20%);
+    right: 0;
+    bottom: 17px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &--email::before {
+    content: " ";
+    position: absolute;
+    width: 32px;
+    height: 21px;
+    mask-image: url("../img/stack.svg#email");
+    mask-repeat: no-repeat;
+    background-color: fade(@black, 20%);
+    right: 0;
+    bottom: 15px;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  &:hover::before {
+    background-color: @green;
+  }
+
+  @media (min-width: @w-tablet) {
+    &--tel::before {
+      right: 26px;
+    }
+
+    &--email::before {
+      right: 22px;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    &--tel::before {
+      right: 0;
+    }
+
+    &--email::before {
+      right: 0;
+    }
+  }
 }
 
 .form__group--comments {
@@ -374,6 +430,7 @@
   box-sizing: border-box;
   padding: 17px;
   outline: none;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     box-shadow: none;

@@ -11,11 +11,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 81%;
+    height: 1px;
+    background-color: #e5e5e5;
+    top: 70px;
+    left: 9%;
+  }
 
   @media (min-width: @w-tablet) {
     padding: 51px 50px 58px;
     flex-direction: row;
     justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
   }
 
   @media (min-width: @w-desktop) {
@@ -28,10 +43,26 @@
   display: none;
 
   @media (min-width: @w-tablet) {
-    display: inline;
+    display: inline-block;
+    width: 102px;
+    height: 34px;
+    mask-image: url("../../img/stack.svg#logo-footer");
+    mask-repeat: no-repeat;
+    background-color: @black;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
 
-    & img {
-      width: 102px;
+    &:hover {
+      background-color: @green;
+    }
+
+    &:active {
+      background-color: @green;
+      opacity: 30%;
+    }
+
+    &:focus {
+      background-color: @green;
     }
   }
 }
@@ -55,6 +86,8 @@
   width: 28px;
   height: 22px;
   display: block;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
 
   &--vk {
     mask-image: url("../img/stack.svg#vk");
@@ -88,7 +121,7 @@
   font-weight: 700;
   line-height: 18px;
   color: @black;
-  margin-right: 28px;
+  margin-right: 54px;
   text-decoration: none;
 
   &::before {
@@ -103,6 +136,15 @@
     top: -6px;
     mask-size: 150%;
     mask-position: -7px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:hover::before {
+    background-color: @dark-green;
+  }
+
+  &:active::before {
+    background-color: fade(@dark-green, 30%);
   }
 
   @media (min-width: @w-desktop) {
