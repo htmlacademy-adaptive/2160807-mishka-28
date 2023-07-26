@@ -20,6 +20,7 @@
     padding-left: 50px;
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 
   @media (min-width: @w-desktop) {
@@ -42,6 +43,7 @@
 
   @media (min-width: @w-desktop) {
     position: absolute;
+    z-index: 3;
   }
 }
 
@@ -58,7 +60,7 @@
 
     &--menu {
       position: absolute;
-      left: -340px;
+      left: 50px;
       top: 105px;
 
       & .main-nav__link {
@@ -166,6 +168,14 @@
 
 .main-nav {
   position: relative;
+
+  @media (min-width: @w-tablet) {
+    position: static;
+  }
+
+  @media (min-width: @w-desktop) {
+    position: relative;
+  }
 }
 
 .main-nav__wrapper {
