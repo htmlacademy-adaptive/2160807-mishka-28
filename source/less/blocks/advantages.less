@@ -25,7 +25,7 @@
   @media (min-width: @w-tablet) {
     font-size: 43px;
     line-height: 50px;
-    margin-bottom: 97px;
+    margin-bottom: 99px;
   }
 
   @media (min-width: @w-desktop) {
@@ -43,15 +43,21 @@
 
   @media (min-width: @w-tablet) {
     display: grid;
-    grid-template-columns: 32% 42%;
+    grid-template-columns: 36% 45%;
     grid-template-rows: 20% 20% 20%;
     grid-auto-flow: column;
     gap: 110px;
-    column-gap: 70px;
+    column-gap: 95px;
+  }
+
+  @media (min-width: @w-desktop) {
+    gap: 111px;
+    column-gap: 35px;
   }
 }
 
 .advantages__item {
+  font-family: @opensans-bold;
   color: @black;
   font-size: 17px;
   font-weight: 700;
@@ -60,26 +66,38 @@
 
   &--flower::before {
     background-image: url("../img/flower-icon.png");
+    top: -77px;
+    left: -4px;
   }
 
   &--cash::before {
     background-image: url("../img/cash-icon.png");
+    top: -81px;
+    left: -4px;
   }
 
   &--heart::before {
     background-image: url("../img/heart-icon.png");
+    top: -77px;
+    left: -4px;
   }
 
   &--ball::before {
     background-image: url("../img/ball-icon.png");
+    top: -75px;
+    left: -7px;
   }
 
   &--rocket::before {
     background-image: url("../img/rocket-icon.png");
+    top: -80px;
+    left: -6px;
   }
 
   &--gift::before {
     background-image: url("../img/gift-icon.png");
+    left: -8px;
+    top: -77px;
   }
 
   &::before {
@@ -87,7 +105,6 @@
     position: absolute;
     width: 55px;
     height: 82px;
-    top: -82px;
     background-repeat: no-repeat;
     background-position: center;
   }

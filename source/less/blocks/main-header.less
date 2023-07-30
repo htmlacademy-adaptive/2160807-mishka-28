@@ -78,12 +78,13 @@
     &--menu {
       position: absolute;
       left: 50px;
-      top: 105px;
+      top: 109px;
 
       & .main-nav__link {
         padding: 0;
         background-color: transparent;
-        margin-right: 40px;
+        margin-right: 37px;
+        font-size: 15px;
       }
     }
 
@@ -96,13 +97,15 @@
     &--products {
       display: flex;
       position: absolute;
-      bottom: -50px;
+      bottom: -44px;
       left: 50px;
+      gap: 18px;
 
       & .main-nav__link {
         padding: 0;
         background-color: transparent;
         margin-right: 45px;
+        font-size: 15px;
       }
     }
 
@@ -110,10 +113,15 @@
       position: static;
 
       & .main-nav__link {
-        padding: 32.5px 10px 31.5px 50px;
+        padding: 32.5px 0 31.5px 50px;
+        font-size: 17px;
 
         &--catalog {
           border-right: 1px solid fade(@black, 10%);
+        }
+
+        &--form {
+          padding-left: 33px;
         }
       }
     }
@@ -122,6 +130,7 @@
 
 .main-nav__link {
   .link-reset();
+  font-family: @opensans-bold;
   font-size: 17px;
   font-weight: 700;
   width: 100%;
@@ -155,7 +164,7 @@
     mask-image: url("../../img/stack.svg#cart");
     mask-repeat: no-repeat;
     background-color: fade(@black, 20%);
-    left: 30px;
+    left: 32px;
     top: 31px;
     transition: background-color 0.3s ease-in-out;
   }
@@ -247,7 +256,7 @@
   position: absolute;
   cursor: pointer;
   right: 31px;
-  top: -32px;
+  top: -25px;
   z-index: 4;
 
   @media (min-width: @w-tablet) {
@@ -263,7 +272,7 @@
   width: 20px;
   height: 2px;
   background-color: @black;
-  box-shadow: 0 7px 0 0 @black, 0 14px 0 0 #231f20;
+  box-shadow: 0 6px 0 0 @black, 0 12px 0 0 #231f20;
   z-index: 10;
   outline: none;
 
@@ -284,8 +293,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  right: 31px;
-  top: -33px;
+  right: 32px;
+  top: -28px;
   z-index: 10;
 
   &::before,
@@ -294,7 +303,7 @@
     position: absolute;
     top: 9px;
     left: -3px;
-    width: 25px;
+    width: 27px;
     height: 2px;
     background-color: @black;
   }
@@ -343,10 +352,12 @@
     display: block;
     position: absolute;
     right: 50px;
+    top: 94px;
   }
 
   @media (min-width: @w-desktop) {
     margin: 0;
     bottom: -50px;
+    top: 109px;
   }
 }

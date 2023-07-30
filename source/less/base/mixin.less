@@ -24,7 +24,8 @@
   border: 2px solid @dark-grey;
   padding: 14px;
   color: @dark-grey;
-  font-size: 18px;
+  font-family: @opensans-bold;
+  font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
   font-weight: 700;
@@ -57,12 +58,14 @@
   background-image: url("../img/zigzag-line.png");
 
   @media (min-width: @w-tablet) {
-    background-image: url("../img/zigzag-line-desktop.png");
+    background-image: url("../img/zigzag-line-tablet.png");
     height: 17px;
   }
 
   @media (min-width: @w-desktop) {
     width: 90%;
+    background-image: url("../img/zigzag-line-desktop.png");
+    height: 22px;
   }
 }
 
@@ -74,6 +77,12 @@
   background-image: url("../img/zigzag-tablet.png");
   top: -11px;
   left: 0;
+
+  @media (min-width: @w-desktop) {
+    background-image: url("../img/zigzag-fill-desktop.png");
+    height: 34px;
+    top: -17px;
+  }
 }
 
 .flex-center() {

@@ -48,7 +48,7 @@
     box-sizing: border-box;
     display: grid;
     grid-template-columns: auto 527px;
-    column-gap: 23px;
+    column-gap: 16px;
 
     & iframe {
       background-image: url("../img/map-desktop@1x.jpg");
@@ -67,7 +67,7 @@
     padding: 68px 50px 50px;
 
     &--link {
-      padding: 50px 0 57px;
+      padding: 47px 0 57px;
       display: flex;
       justify-content: center;
     }
@@ -80,14 +80,14 @@
 
     &--link {
       justify-self: center;
-      margin-left: 50px;
+      margin-left: 72px;
     }
   }
 }
 
 .contacts__title {
   .title();
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   @media (min-width: @w-tablet) {
     font-size: 43px;
@@ -102,19 +102,20 @@
       height: 81px;
       background-image: url("../../img/stack.svg#flag");
       background-repeat: no-repeat;
-      right: 0;
-      top: -15px;
+      right: 3px;
+      top: -22px;
     }
   }
 
   @media (min-width: @w-desktop) {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 33px;
 
     &::before {
       right: auto;
-      left: -130px;
-      top: -20px;
+      left: -110px;
+      top: -18px;
     }
   }
 }
@@ -123,26 +124,28 @@
   .list-reset();
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 35px;
   margin-bottom: 62px;
 
   @media (min-width: @w-tablet) {
     flex-direction: row;
     justify-content: space-between;
     margin: 0;
+    gap: 0;
   }
 
   @media (min-width: @w-desktop) {
     flex-direction: column;
+    gap: 30px;
   }
 }
 
 .contacts__item {
   display: grid;
-  grid-template-columns: 30% 65%;
+  grid-template-columns: 30% 69%;
 
   @media (min-width: @w-tablet) {
-    grid-template-columns: 80px 250px;
+    grid-template-columns: 80px 254px;
   }
 }
 
@@ -158,6 +161,7 @@
 
 .contacts__subtitle {
   margin: 0;
+  font-size: 14px;
 
   @media (min-width: @w-tablet) {
     font-size: 17px;
@@ -171,6 +175,7 @@
   font-style: normal;
   outline: none;
   transition: color 0.3s ease-in-out;
+  font-size: 14px;
 
   &--email {
     position: relative;
@@ -197,6 +202,10 @@
     }
   }
 
+  &--address {
+    line-height: 30px;
+  }
+
   @media (min-width: @w-tablet) {
     font-size: 17px;
     line-height: 30px;
@@ -207,13 +216,14 @@
     }
 
     &--address {
-      width: 181px;
+      width: 218px;
     }
   }
 
   @media (min-width: @w-desktop) {
     &--email::before {
-      bottom: 0;
+      bottom: -6px;
+      width: 203px;
     }
   }
 }
