@@ -2,8 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon16.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body>
 
@@ -202,15 +207,15 @@
         <form class="modal__form" action=" https://echo.htmlacademy.ru/" method="post">
           <ul class="modal__list">
             <li class="modal__item">
-              <input class="modal__radio visually-hidden" type="radio" name="s" id="s" checked>
+              <input class="modal__radio visually-hidden" type="radio" name="size" value="s" id="s" checked>
               <label class="modal__size" for="s">S</label>
             </li>
             <li class="modal__item">
-              <input class="modal__radio visually-hidden" type="radio" name="m" id="m">
+              <input class="modal__radio visually-hidden" type="radio" name="size" value="m" id="m">
               <label class="modal__size" for="m">M</label>
             </li>
             <li class="modal__item">
-              <input class="modal__radio visually-hidden" type="radio" name="l" id="l">
+              <input class="modal__radio visually-hidden" type="radio" name="size" value="l" id="l">
               <label class="modal__size" for="l">L</label>
             </li>
           </ul>

@@ -74,6 +74,7 @@
 
   @media (min-width: @w-tablet) {
     display: flex;
+    flex-wrap: wrap;
 
     &--menu {
       position: absolute;
@@ -96,6 +97,7 @@
   @media (min-width: @w-desktop) {
     &--products {
       display: flex;
+      flex-wrap: wrap;
       position: absolute;
       bottom: -44px;
       left: 50px;
@@ -109,8 +111,14 @@
       }
     }
 
+    &--user {
+      width: 500px;
+      justify-content: flex-end;
+    }
+
     &--menu {
       position: static;
+      width: 466px;
 
       & .main-nav__link {
         padding: 32.5px 0 31.5px 50px;
@@ -275,6 +283,7 @@
   box-shadow: 0 6px 0 0 @black, 0 12px 0 0 #231f20;
   z-index: 10;
   outline: none;
+  transition: all 0.3s ease-in-out;
 
   &:active::before {
     opacity: 30%;
@@ -296,6 +305,7 @@
   right: 32px;
   top: -28px;
   z-index: 10;
+  transition: all 0.3s ease-in-out;
 
   &::before,
   &::after {
@@ -306,6 +316,7 @@
     width: 27px;
     height: 2px;
     background-color: @black;
+    transition: all 0.3s ease-in-out;
   }
 
   &::before {
@@ -357,7 +368,7 @@
 
   @media (min-width: @w-desktop) {
     margin: 0;
-    bottom: -50px;
-    top: 109px;
+    bottom: -44px;
+    top: auto;
   }
 }
