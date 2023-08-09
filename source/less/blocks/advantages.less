@@ -44,8 +44,7 @@
   @media (min-width: @w-tablet) {
     display: grid;
     grid-template-columns: 36% 45%;
-    grid-template-rows: 20% 20% 20%;
-    grid-auto-flow: column;
+    grid-auto-flow: dense;
     gap: 110px;
     column-gap: 95px;
   }
@@ -112,5 +111,13 @@
   @media (min-width: @w-tablet) {
     font-size: 20px;
     line-height: 22px;
+
+    &--cash {
+      grid-column: 1;
+    }
+
+    &--heart {
+      grid-column: 1;
+    }
   }
 }

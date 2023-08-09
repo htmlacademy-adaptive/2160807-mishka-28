@@ -71,6 +71,8 @@
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
+  position: relative;
+  margin: 0;
 
   &--type {
     margin-bottom: 30px;
@@ -81,12 +83,12 @@
   }
 
   &--lfp {
-    margin-bottom: 29px;
+    margin-bottom: 28px;
   }
 
   &--comments {
     margin-bottom: 21px;
-    display: inline-block;
+    display: block;
   }
 
   &::before {
@@ -96,22 +98,7 @@
     height: 1px;
     background-color: @green;
     right: 0;
-  }
-
-  &--type::before {
-    top: 5px;
-  }
-
-  &--color::before {
-    top: 5px;
-  }
-
-  &--lfp::before {
-    top: -38px;
-  }
-
-  &--comments::before {
-    top: 11px;
+    top: 7px;
   }
 
   @media (min-width: @w-tablet) {
@@ -248,7 +235,7 @@
 
   &--contacts {
     gap: 35px;
-    margin-bottom: 31px;
+    margin-bottom: 36px;
   }
 
   @media (min-width: @w-tablet) {
@@ -352,6 +339,7 @@
   display: flex;
   align-items: center;
   min-height: 42px;
+  cursor: pointer;
 
   &::before {
     content: " ";
@@ -404,7 +392,7 @@
       width: 20px;
       height: 20px;
       top: 10px;
-      left: 16px;
+      left: 15px;
     }
   }
 }
@@ -425,6 +413,7 @@
     box-sizing: border-box;
     left: 0;
     transition: border-color 0.2s ease-in-out;
+    cursor: pointer;
   }
 
   &:hover::before {
@@ -457,6 +446,7 @@
     left: 5px;
     top: 11px;
     background-size: 58%;
+    cursor: pointer;
   }
 
   &:focus ~ .form__checkbox-style::before {
@@ -475,6 +465,8 @@
 .form__group-input {
   .input-style();
   background-color: transparent;
+  padding-right: 40px;
+  box-sizing: border-box;
 
   &--tel {
     margin-top: 3px;

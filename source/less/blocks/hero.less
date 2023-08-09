@@ -72,6 +72,7 @@
 
   @media (min-width: @w-tablet) {
     display: flex;
+    height: 119px;
   }
 }
 
@@ -82,7 +83,6 @@
   color: @white;
   font-weight: 700;
   display: block;
-  min-height: 103px;
   box-sizing: border-box;
   padding: 24px 160px 31px 30px;
   background-color: @green;
@@ -90,17 +90,11 @@
   transition: all 0.3s ease-in-out;
   outline: none;
 
-  &:hover {
-    min-height: 108px;
-    padding-top: 19px;
-  }
-
-  &:focus {
-    min-height: 108px;
-    padding-top: 19px;
-  }
-
   &--lamp {
+    &:hover {
+      background-color: #59d5bc;
+    }
+
     &::before {
       content: " ";
       position: absolute;
@@ -127,6 +121,10 @@
 
   &--toy {
     background-color: @dark-green;
+
+    &:hover {
+      background-color: #46c1ae;
+    }
 
     &::before {
       content: " ";
@@ -157,6 +155,16 @@
     width: 50%;
     font-size: 20px;
     line-height: 29px;
+
+    &:hover {
+      padding-top: 19px;
+      transform: translateY(-5px);
+    }
+
+    &:focus {
+      padding-top: 19px;
+      transform: translateY(-5px);
+    }
   }
 
   @media (min-width: @w-desktop) {

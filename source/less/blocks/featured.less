@@ -8,11 +8,16 @@
   @media (min-width: @w-tablet) {
     &::before {
       .zig-zag-fill();
+      top: -15px;
     }
   }
 
   @media (min-width: @w-desktop) {
     .flex-center();
+
+    &::before {
+      top: -19px;
+    }
   }
 }
 

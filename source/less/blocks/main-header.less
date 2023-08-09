@@ -102,6 +102,7 @@
       bottom: -44px;
       left: 50px;
       gap: 18px;
+      width: 805px;
 
       & .main-nav__link {
         padding: 0;
@@ -120,17 +121,21 @@
       position: static;
       width: 466px;
 
+      & .main-nav__item:nth-child(odd) {
+        & .main-nav__link {
+          border-right: 1px solid fade(@black, 10%);
+        }
+      }
+
+      & .main-nav__item:nth-child(even) {
+        & .main-nav__link {
+          padding-left: 33px;
+        }
+      }
+
       & .main-nav__link {
         padding: 32.5px 0 31.5px 50px;
         font-size: 17px;
-
-        &--catalog {
-          border-right: 1px solid fade(@black, 10%);
-        }
-
-        &--form {
-          padding-left: 33px;
-        }
       }
     }
   }

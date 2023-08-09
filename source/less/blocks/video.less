@@ -20,22 +20,40 @@
   border: 1px solid @grey;
   padding-top: 22px;
 
-  &:hover {
-    box-shadow: 0 6px 10px 0 fade(@black, 10%);
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px 0 fade(@black, 10%);
-  }
-
   @media (min-width: @w-tablet) {
     display: grid;
     padding: 0;
+    position: relative;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      width: 100%;
+      height: 264px;
+      background-color: transparent;
+      bottom: 0;
+      transition: all 0.2s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      box-shadow: 0 6px 10px 0 fade(@black, 10%);
+    }
+
+    &:active::before {
+      box-shadow: 0 3px 5px 0 fade(@black, 10%);
+    }
   }
 
   @media (min-width: @w-desktop) {
     grid-template-columns: 683px auto;
     grid-template-rows: 171px auto;
+
+    &::before {
+      width: 365px;
+      height: 100%;
+      right: 0;
+    }
   }
 }
 
