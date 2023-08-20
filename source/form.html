@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Мишка</title>
+    <link rel="preload" href="fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
     <link rel="icon" href="img/favicon16.svg" type="image/svg+xml">
@@ -21,47 +23,47 @@
             <img src="img/mishka-logo-mobile.svg" width="86" height="35" alt="логотип Мишка">
           </picture>
         </a>
-        <nav class="main-header__main-nav main-nav">
-          <div class="main-nav__wrapper main-nav__wrapper--closed main-nav__wrapper--nojs">
-            <ul class="main-nav__list main-nav__list--menu">
-              <li class="main-nav__item">
-                <a href="catalog.html" class="main-nav__link main-nav__link--catalog">
+        <nav class="main-header__nav">
+          <div class="main-header__nav-wrapper main-header__nav-wrapper--closed main-header__nav-wrapper--nojs">
+            <ul class="main-header__nav-list main-header__nav-list--menu">
+              <li class="main-header__nav-item">
+                <a href="catalog.html" class="main-header__nav-link main-header__nav-link--catalog">
                   Каталог товаров
                 </a>
               </li>
-              <li class="main-nav__item">
-                <a href="form.html" class="main-nav__link main-nav__link--form">
+              <li class="main-header__nav-item">
+                <a href="form.html" class="main-header__nav-link main-header__nav-link--form">
                   Вязание на заказ
                 </a>
               </li>
             </ul>
-            <ul class="main-nav__list main-nav__list--user">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link main-nav__link--search">
+            <ul class="main-header__nav-list main-header__nav-list--user">
+              <li class="main-header__nav-item">
+                <a href="#" class="main-header__nav-link main-header__nav-link--search">
                   <span>Поиск по сайту</span>
                 </a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link main-nav__link--cart">
+              <li class="main-header__nav-item">
+                <a href="#" class="main-header__nav-link main-header__nav-link--cart">
                   Корзина: пока пуста
                 </a>
               </li>
             </ul>
-            <ul class="main-nav__list main-nav__list--products">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+            <ul class="main-header__nav-list main-header__nav-list--products">
+              <li class="main-header__nav-item">
+                <a href="#" class="main-header__nav-link">
                   <span>Новые поступления</span>
                 </a>
               </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">
+              <li class="main-header__nav-item">
+                <a href="#" class="main-header__nav-link">
                   <span>Распродажа</span>
                 </a>
               </li>
             </ul>
-            <p class="main-nav__info">Бесплатная доставка по России</p>
+            <p class="main-header__nav-info">Бесплатная доставка по России</p>
           </div>
-          <button class="main-nav__toggle" type="button">
+          <button class="main-header__nav-toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
         </nav>
@@ -70,9 +72,8 @@
 
     <main class="form-container">
 
-      <h1 class="form-container__title">Вязание на заказ</h1>
-
       <section class="form">
+        <h1 class="form__main-title">Вязание на заказ</h1>
         <div class="form__wrapper">
           <p class="form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
           <form class="form__container" action=" https://echo.htmlacademy.ru/" method="post">
@@ -183,8 +184,8 @@
             </a>
           </li>
         </ul>
-        <div class="main-footer__html html-logo">
-          <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <div class="main-footer__html">
+          <a class="main-footer__html-link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
         </div>
       </div>
     </footer>

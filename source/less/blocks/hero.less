@@ -72,7 +72,7 @@
 
   @media (min-width: @w-tablet) {
     display: flex;
-    height: 119px;
+    min-height: 119px;
   }
 }
 
@@ -110,12 +110,12 @@
       opacity: 70%;
     }
 
-    &:active::before {
-      opacity: 30%;
-    }
-
     &:focus::before {
       opacity: 70%;
+    }
+
+    &:active::before {
+      opacity: 30%;
     }
   }
 
@@ -141,12 +141,12 @@
       opacity: 70%;
     }
 
-    &:active::before {
-      opacity: 30%;
-    }
-
     &:focus::before {
       opacity: 70%;
+    }
+
+    &:active::before {
+      opacity: 30%;
     }
   }
 
