@@ -1,12 +1,6 @@
 .form {
   position: relative;
 
-  @media (min-width: @w-tablet) {
-    &::before {
-      .zig-zag-fill();
-    }
-  }
-
   @media (min-width: @w-desktop) {
     .flex-center();
   }
@@ -14,6 +8,7 @@
 
 .form__wrapper {
   padding: 17px 33px 55px 30px;
+  position: relative;
 
   @media (min-width: @w-tablet) {
     padding: 65px 50px 50px;
@@ -26,7 +21,7 @@
   }
 }
 
-.form-container__title {
+.form__main-title {
   .title();
   text-align: center;
   font-size: 27px;
@@ -34,18 +29,26 @@
   padding-top: 73px;
   box-sizing: border-box;
   background-color: @grey;
+  width: 100%;
 
   @media (min-width: @w-tablet) {
     font-size: 43px;
     line-height: 50px;
     height: 226px;
     padding-top: 101px;
+    position: relative;
+
+    &::before {
+      .zig-zag-fill();
+    }
   }
 
   @media (min-width: @w-desktop) {
     font-size: 53px;
     line-height: 57px;
     height: 254px;
+    position: relative;
+    z-index: -1;
   }
 }
 
